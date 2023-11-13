@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Random Photo Viewer</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div>
-    <button onclick="selectGender('MAN')">MAN</button>
-    <button onclick="selectGender('WOMAN')">WOMAN</button>
-    <input type="text" id="seedInput" placeholder="Enter seed">
-    <button onclick="refresh()">Refresh</button>
-  </div>
-  <div>
-    <img id="photoDisplay" src="" alt="Random Photo">
-  </div>
-  <div>
-    <label for="confidence">Rate your confidence (1-10):</label>
-    <input type="number" id="confidence" min="1" max="10">
-    <button onclick="checkAnswer()">Next</button>
-  </div>
+    <h1>Photo Guessing Game</h1>
+    <div id="photo-container">
+        <img id="display-photo" src="" alt="Random Photo">
+    </div>
+    <div>
+        <button onclick="chooseGender('man')">Man</button>
+        <button onclick="chooseGender('woman')">Woman</button>
+    </div>
+    <div>
+        <label for="confidence">Rate your confidence (1-10): </label>
+        <input type="number" id="confidence" min="1" max="10">
+    </div>
+    <button onclick="checkGuess()">Next</button>
 
-  <script defer src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
