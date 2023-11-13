@@ -1,0 +1,29 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Gender Guessing Game</title>
+</head>
+<body>
+  <div id="photo-container">
+    <!-- Display random photo here -->
+  </div>
+  <form id="guess-form">
+    <label for="confidence">Confidence (1-10): </label>
+    <input type="number" id="confidence" name="confidence" min="1" max="10" value="1" required>
+    <button type="button" onclick="submitGuess('Man')">Man</button>
+    <button type="button" onclick="submitGuess('Woman')">Woman</button>
+    <button type="button" onclick="nextPhoto()">Next</button>
+  </form>
+  <div id="statistics">
+    <!-- Display statistics here -->
+  </div>
+  <script src="main.js"></script>
+  <script>
+    console.log('HTML Loaded');
+  </script>
+</body>
+</html>
